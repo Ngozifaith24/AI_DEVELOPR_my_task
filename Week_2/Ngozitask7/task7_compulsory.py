@@ -33,7 +33,7 @@ patient_profile = {
 
 #Derived Data
 patient_profile["Tests"]["Prices"] = sum(prices) / len(prices)
-patient_profile["Basic Info"]["Intial"] ="".join([n[0] for n in name.split()])
+patient_profile["Basic Info"]["Initial"] ="".join([n[0] for n in name.split()])
 patient_profile["Symptoms count"] = len(symptoms_set)
 
 #Output Section
@@ -43,10 +43,10 @@ print(f"Age:\t\t{patient_profile['Basic Info']['Age']}")
 print(f"Gender:\t\t{patient_profile['Basic Info']['Gender']}")
 print(f"Initial:\t\t{patient_profile['Basic Info']['Initial']}")
 print("\n===Test Prices===")
-print(patient_profile["Test"])
+print(patient_profile["Tests"])
 print("\n===Next of kin Info===")
 print(patient_profile["Next of Kin"])
 print("\n===Symptoms===")
 print(patient_profile["Symptoms"])
 print(f"\nTotal Symptoms:\t{patient_profile['Symptoms count']}")
-print(f"Average price:\t{patient_profile['Tests']['Average']:.2f}")
+print(f"Average price:\t{patient_profile['Tests price average']:.2f}")
